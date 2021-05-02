@@ -5,13 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using CitizenFX.Core;
 
-namespace RPModClient
+namespace RPModServer
 {
-    public class RPSpawn : BaseScript
+    public class ServerInit : BaseScript
     {
-        public RPSpawn()
+        public ServerInit()
         {
 
+
         }
+
+
+
     }
 }

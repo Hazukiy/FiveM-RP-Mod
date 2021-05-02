@@ -1,0 +1,8 @@
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModClient\obj\Debug\RPModClient.csproj.CoreCompileInputs.cache
+C:\Users\hazuk\AppData\Local\FiveM\FiveM.app\citizen\clr2\lib\mono\4.5\RPModClient.net.dll
+C:\Users\hazuk\AppData\Local\FiveM\FiveM.app\citizen\clr2\lib\mono\4.5\RPModClient.net.pdb
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModClient\obj\Debug\RPModClient.csproj.CopyComplete
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModClient\obj\Debug\RPModClient.net.dll
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModClient\obj\Debug\RPModClient.net.pdb
+E:\txData\CFXDefault_8EC265.base\resources\RPMod\RPModClient.net.dll
+E:\txData\CFXDefault_8EC265.base\resources\RPMod\RPModClient.net.pdb

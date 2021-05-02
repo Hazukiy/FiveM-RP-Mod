@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CitizenFX.Core;
 
-namespace RPModServer
+namespace RPModClient
 {
-    public class RPMain : BaseScript
+    public static class Constants
     {
-        public RPMain()
-        {
-        }
-
+        public const string ChatPrefix = "[RPMod]";
     }
 }
