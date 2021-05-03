@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xHW67kBmNM6IRZXeUG8UdmbxZj3KsNJdYtDoW+FAAR9oTGhuXiKloR5HDoK59CPCnHJK6s55AVuditg+38c7hw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModServer\\RPModServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hazuk\\.nuget\\packages\\litedb\\5.0.10\\litedb.5.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

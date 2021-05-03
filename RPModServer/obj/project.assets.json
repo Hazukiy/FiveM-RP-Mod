@@ -1,0 +1,191 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "LiteDB/5.0.10": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net45/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiteDB.dll": {}
+        }
+      },
+      "RPModShared/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/RPModShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPModShared.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win": {
+      "LiteDB/5.0.10": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net45/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiteDB.dll": {}
+        }
+      },
+      "RPModShared/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/RPModShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPModShared.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win-x64": {
+      "LiteDB/5.0.10": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net45/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiteDB.dll": {}
+        }
+      },
+      "RPModShared/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/RPModShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPModShared.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win-x86": {
+      "LiteDB/5.0.10": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Runtime"
+        ],
+        "compile": {
+          "lib/net45/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiteDB.dll": {}
+        }
+      },
+      "RPModShared/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/RPModShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPModShared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LiteDB/5.0.10": {
+      "sha512": "x70WuqMDuP75dajqSLvO+AnI/BbwS6da+ukTO7rueV7VoXoQ5CRA9FV4r7cOS4OUr2NS1Up7LDIutjCxQycRvg==",
+      "type": "package",
+      "path": "litedb/5.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppVeyorSettings.json",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.10.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
+    "RPModShared/1.0.0": {
+      "type": "project",
+      "path": "../RPModShared/RPModShared.csproj",
+      "msbuildProject": "../RPModShared/RPModShared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5.2": [
+      "LiteDB >= 5.0.10",
+      "RPModShared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hazuk\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModServer\\RPModServer.csproj",
+      "projectName": "RPModServer",
+      "projectPath": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModServer\\RPModServer.csproj",
+      "packagesPath": "C:\\Users\\hazuk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModServer\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\hazuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net452"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/immixsoftware/_packaging/ImmixCS/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net452": {
+          "projectReferences": {
+            "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\RPModShared.csproj": {
+              "projectPath": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\RPModShared.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net452": {
+        "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "[5.0.10, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

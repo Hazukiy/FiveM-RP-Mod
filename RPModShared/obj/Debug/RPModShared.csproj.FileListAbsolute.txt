@@ -1,0 +1,7 @@
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModShared\bin\Debug\RPModShared.dll
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModShared\bin\Debug\RPModShared.pdb
+E:\txData\CFXDefault_8EC265.base\resources\RPMod\RPModShared.dll
+E:\txData\CFXDefault_8EC265.base\resources\RPMod\RPModShared.pdb
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModShared\obj\Debug\RPModShared.csproj.CoreCompileInputs.cache
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModShared\obj\Debug\RPModShared.dll
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModShared\obj\Debug\RPModShared.pdb

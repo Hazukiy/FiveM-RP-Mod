@@ -48,12 +48,19 @@
     <Compile Include="Commands\CommandActions.cs" />
     <Compile Include="Commands\CommandRegisterModel.cs" />
     <Compile Include="Commands\Commands.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Hud\HudInit.cs" />
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Helper\ClientHelper.cs" />
     <Compile Include="Models\MessageType.cs" />
+    <Compile Include="Models\PlayerConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spawn\SpawnInit.cs" />
+    <Compile Include="PlayerInit.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RPModShared\RPModShared.csproj">
+      <Project>{2bbd0db8-1074-4f12-9e12-ec5a0965630a}</Project>
+      <Name>RPModShared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

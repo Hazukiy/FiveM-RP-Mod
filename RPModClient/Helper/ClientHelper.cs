@@ -1,32 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CitizenFX.Core;
 using CitizenFX.Core.Native;
+using RPModShared;
 using static CitizenFX.Core.Native.API;
 
 namespace RPModClient
 {
-    public class Helper : BaseScript
+    public class ClientHelper : BaseScript
     {
         #region Singleton
-        private static Helper _instance;
-        public static Helper Instance
+        private static ClientHelper _instance;
+        public static ClientHelper Instance
         {
             get
             {
                 if(_instance == null)
                 {
-                    _instance = new Helper();
+                    _instance = new ClientHelper();
                 }
                 return _instance;
             }
         }
         #endregion
 
-        private Helper()
+        private ClientHelper()
         {
         }
 

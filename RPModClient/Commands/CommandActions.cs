@@ -28,18 +28,22 @@ namespace RPModClient
 
         private CommandActions()
         {
+        }
 
+        public void GetPlayerData(int source, List<object> args, string raw)
+        {
+            ClientHelper.Instance.PrintToClient($"{PlayerConstants.PlayerProfile}", MessageType.Information);
         }
 
         public void GetPlayerLocation(int source, List<object> args, string raw)
         {
-            Helper.Instance.PrintToClient($"Location | X: {Game.PlayerPed.Position.X} | Y: {Game.PlayerPed.Position.Y} | Z: {Game.PlayerPed.Position.Z}", MessageType.Information);
+            ClientHelper.Instance.PrintToClient($"Location | X: {Game.PlayerPed.Position.X} | Y: {Game.PlayerPed.Position.Y} | Z: {Game.PlayerPed.Position.Z}", MessageType.Information);
         }
 
         public void Die(int source, List<object> args, string raw)
         {
             Game.PlayerPed.Kill();
-            Helper.Instance.PrintToClient($"You killed yourself.", MessageType.Warning);
+            ClientHelper.Instance.PrintToClient($"You've killed yourself.", MessageType.Warning);
         }
     }
 }

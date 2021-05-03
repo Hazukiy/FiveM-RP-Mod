@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CF31630-97A3-48AA-8B24-459DFA8118DB}</ProjectGuid>
+    <ProjectGuid>{2BBD0DB8-1074-4F12-9E12-EC5A0965630A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RPModServer</RootNamespace>
-    <AssemblyName>RPModServer.net</AssemblyName>
+    <RootNamespace>RPModShared</RootNamespace>
+    <AssemblyName>RPModShared</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,12 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CitizenFX.Core">
-      <HintPath>Dependencies\CitizenFX.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,21 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\DatabaseEngine.cs" />
-    <Compile Include="DefaultAccount.cs" />
-    <Compile Include="ServerInit.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Models\PlayerDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="LiteDB">
-      <Version>5.0.10</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RPModShared\RPModShared.csproj">
-      <Project>{2bbd0db8-1074-4f12-9e12-ec5a0965630a}</Project>
-      <Name>RPModShared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

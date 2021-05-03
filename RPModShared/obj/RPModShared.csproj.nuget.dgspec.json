@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\RPModShared.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\RPModShared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\RPModShared.csproj",
+        "projectName": "RPModShared",
+        "projectPath": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\RPModShared.csproj",
+        "packagesPath": "C:\\Users\\hazuk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hazuk\\Documents\\GitHub\\FiveM-RP-Mod\\RPModShared\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\hazuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net452"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/immixsoftware/_packaging/ImmixCS/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net452": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net452": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

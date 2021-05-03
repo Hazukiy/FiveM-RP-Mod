@@ -1,5 +1,6 @@
 E:\txData\CFXDefault_8EC265.base\resources\RPMod\RPModServer.net.dll
 E:\txData\CFXDefault_8EC265.base\resources\RPMod\RPModServer.net.pdb
+C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModServer\obj\Debug\RPModServer.csprojAssemblyReference.cache
 C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModServer\obj\Debug\RPModServer.csproj.CoreCompileInputs.cache
 C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModServer\obj\Debug\RPModServer.csproj.CopyComplete
 C:\Users\hazuk\Documents\GitHub\FiveM-RP-Mod\RPModServer\obj\Debug\RPModServer.net.dll

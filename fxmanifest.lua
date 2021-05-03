@@ -7,5 +7,10 @@ author 'Tiggs'
 description 'Test'
 version '1.0.0'
 
-client_scripts 'RPModClient.net.dll'
+files {
+	'Newtonsoft.Json.dll',
+	'RPModShared.dll'
+}
+
+client_script 'RPModClient.net.dll'
 server_script 'RPModServer.net.dll'

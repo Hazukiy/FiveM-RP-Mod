@@ -25,14 +25,21 @@ namespace RPModClient
 
         private Commands()
         {
-
         }
 
         // NOTE: Add new commands into here to they can be registered dynamically
         public List<CommandRegisterModel> DynamicRegister = new List<CommandRegisterModel>()
         {
             Die,
-            GetLocation
+            GetLocation,
+            GetPlayerData
+        };
+
+        public static CommandRegisterModel GetPlayerData = new CommandRegisterModel()
+        {
+            Name = "getplayerdata",
+            ActionDelegate = new Action<int, List<object>, string>((source, args, raw) => CommandActions.Instance.GetPlayerData(source, args, raw)),
+            IsRestrictedCommand = false
         };
 
         public static CommandRegisterModel GetLocation = new CommandRegisterModel()
