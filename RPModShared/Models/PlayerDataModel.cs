@@ -17,12 +17,11 @@ namespace RPModShared
         // Money related
         public long Wallet { get; set; }
         public long Bank { get; set; }
-        public long Salary { get; set; }
         public long Debt { get; set; }
 
         public override string ToString()
         {
-            return $"Account for ID {Id} ({LicenseID}) {Name} | Wallet: ${Wallet} | Bank: ${Bank} | Salary: ${Salary} | Debt: ${Debt}";
+            return $"Account for ID {Id} ({LicenseID}) {Name} | Wallet: ${Wallet} | Bank: ${Bank} | Debt: ${Debt}";
         }
     }
 }

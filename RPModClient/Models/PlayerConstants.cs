@@ -1,4 +1,5 @@
-﻿using RPModShared;
+﻿using RPModClient.Job;
+using RPModShared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace RPModClient
     {
         public static PlayerDataModel PlayerProfile { get; set; }
 
-        public static int NextSalary { get; set; } = 60;
+        public static JobsModel CurrentJob { get; set; } = Jobs.Unemployed;
+
+        public static int NextSalary { get; set; } = 60; // Every 60 seconds, same for every job
     }
 }

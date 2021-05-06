@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Drawing;
 using System.Threading.Tasks;
-using CitizenFX.Core;
-using CitizenFX.Core.UI;
 using RPModShared;
+using CitizenFX.Core;
 using static CitizenFX.Core.Native.API;
 
 namespace RPModClient
@@ -38,11 +33,11 @@ namespace RPModClient
             {
                 PlayerConstants.NextSalary = 60;
 
-                PlayerConstants.PlayerProfile.Bank += PlayerConstants.PlayerProfile.Salary;
+                PlayerConstants.PlayerProfile.Bank += PlayerConstants.CurrentJob.BaseSalary;
 
-                TriggerServerEvent("rpSavePlayerData", PlayerConstants.PlayerProfile);
+                TriggerServerEvent("rpSaveBank", PlayerConstants.PlayerProfile.Bank);
 
-                ClientHelper.Instance.PrintToClient($"Salary income of ${PlayerConstants.PlayerProfile.Salary}");
+                ClientHelper.Instance.PrintToClient($"Salary income of ${PlayerConstants.CurrentJob.BaseSalary}");
             }
 
             await Delay(1000);
@@ -63,7 +58,8 @@ namespace RPModClient
             }
 
             // Change the player model
-            Game.Player.ChangeModel(new Model(PedHash.Hillbilly01AMM)); 
+            Random rnd = new Random();
+            Game.Player.ChangeModel(new Model(PlayerConstants.CurrentJob.Models[rnd.Next(0, PlayerConstants.CurrentJob.Models.Count)])); 
         }
 
         private void OnClientResourceStart(string resourceName)

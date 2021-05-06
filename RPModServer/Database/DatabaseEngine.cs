@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CitizenFX.Core;
 using RPModShared;
 using LiteDB;
@@ -52,8 +48,7 @@ namespace RPModServer
                         LicenseID = licenseID,
                         Wallet = DefaultAccount.DefaultWallet,
                         Bank = DefaultAccount.DefaultBank,
-                        Debt = DefaultAccount.DefaultDebt,
-                        Salary = DefaultAccount.DefaultSalary
+                        Debt = DefaultAccount.DefaultDebt
                     };
 
                     var result = col.Insert(data);
@@ -65,21 +60,24 @@ namespace RPModServer
             }
         }
 
-        public void SavePlayer(PlayerDataModel data)
+        public void SaveBank(long newValue, string licenseID)
         {
             using (var db = new LiteDatabase(_databaseLocation))
             {
                 // Grab the collection
                 var col = db.GetCollection<PlayerDataModel>("playerData");
+                var playerData = col.Find(x => x.LicenseID.Contains(licenseID)).FirstOrDefault();
+                playerData.Bank = newValue;
 
-                var result = col.Upsert(data);
+                // Update & get transaction result
+                var result = col.Update(playerData);
                 if(result)
                 {
-                    Debug.WriteLine($"Successfully updated record for licenseID: {data.LicenseID}");
+                    Debug.WriteLine($"Successfully updated bank to ${playerData.Bank} for licenseID: {licenseID}");
                 }
                 else
                 {
-                    Debug.WriteLine($"Failed to update record for licenseID: {data.LicenseID}");
+                    Debug.WriteLine($"Failed to update bank for licenseID: {licenseID}");
                 }
             }
         }

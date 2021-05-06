@@ -49,6 +49,9 @@
     <Compile Include="Commands\CommandRegisterModel.cs" />
     <Compile Include="Commands\Commands.cs" />
     <Compile Include="Hud\HudInit.cs" />
+    <Compile Include="Job\JobPermissionSet.cs" />
+    <Compile Include="Job\Jobs.cs" />
+    <Compile Include="Job\JobsModel.cs" />
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Helper\ClientHelper.cs" />
     <Compile Include="Models\MessageType.cs" />

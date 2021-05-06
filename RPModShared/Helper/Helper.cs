@@ -38,7 +38,6 @@ namespace RPModShared
                 LicenseID = obj.FirstOrDefault(x => x.Key.Equals("LicenseID")).Value.ToString(),
                 Wallet = Convert.ToInt64(obj.FirstOrDefault(x => x.Key.Equals("Wallet")).Value),
                 Bank = Convert.ToInt64(obj.FirstOrDefault(x => x.Key.Equals("Bank")).Value),
-                Salary = Convert.ToInt64(obj.FirstOrDefault(x => x.Key.Equals("Salary")).Value),
                 Debt = Convert.ToInt64(obj.FirstOrDefault(x => x.Key.Equals("Debt")).Value)
             };
         }
