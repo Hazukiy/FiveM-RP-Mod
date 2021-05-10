@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text;
 using System.Threading.Tasks;
 using CitizenFX.Core;
 using CitizenFX.Core.UI;
@@ -20,17 +21,17 @@ namespace RPModClient
 
         private async Task HudTick()
         {
-            if(Game.Player.IsPlaying && PlayerConstants.PlayerProfile != null)
+            if(Game.Player.IsPlaying && LocalPlayerConstants.PlayerProfile != null)
             {
                 try
                 {
                     // Constrcut text
-                    var wallet = new Text($"Wallet: ${PlayerConstants.PlayerProfile.Wallet}", new PointF(_width, _topHudHeight), _hudSize);
-                    var bank = new Text($"Bank: ${PlayerConstants.PlayerProfile.Bank}", new PointF(_width, _topHudHeight + 13), _hudSize);
-                    var debt = new Text($"Debt: ${PlayerConstants.PlayerProfile.Debt}", new PointF(_width, _topHudHeight + 26), _hudSize);
-                    var job = new Text($"Job: {PlayerConstants.CurrentJob.Name}", new PointF(_width, _topHudHeight + 39), _hudSize);
-                    var salary = new Text($"Salary: ${PlayerConstants.CurrentJob.BaseSalary}", new PointF(_width, _topHudHeight + 52), _hudSize);
-                    var salaryIn = new Text($"Salary In: {PlayerConstants.NextSalary}", new PointF(_width, _topHudHeight + 65), _hudSize);
+                    var wallet = new Text($"Wallet: ${LocalPlayerConstants.PlayerProfile.Wallet}", new PointF(_width, _topHudHeight), _hudSize);
+                    var bank = new Text($"Bank: ${LocalPlayerConstants.PlayerProfile.Bank}", new PointF(_width, _topHudHeight + 13), _hudSize);
+                    var debt = new Text($"Debt: ${LocalPlayerConstants.PlayerProfile.Debt}", new PointF(_width, _topHudHeight + 26), _hudSize);
+                    var job = new Text($"Job: {LocalPlayerConstants.CurrentJob.Name}", new PointF(_width, _topHudHeight + 39), _hudSize);
+                    var salary = new Text($"Salary: ${LocalPlayerConstants.CurrentJob.BaseSalary}", new PointF(_width, _topHudHeight + 52), _hudSize);
+                    var salaryIn = new Text($"Salary In: {LocalPlayerConstants.NextSalary}", new PointF(_width, _topHudHeight + 65), _hudSize);
 
                     // Set colours
                     wallet.Color = Color.FromArgb(255, 221, 81);
@@ -40,6 +41,7 @@ namespace RPModClient
                     salary.Color = Color.FromArgb(255, 221, 81);
                     salaryIn.Color = Color.FromArgb(255, 221, 81);
 
+                    // Draw
                     wallet.Draw();
                     bank.Draw();
                     debt.Draw();

@@ -23,7 +23,7 @@ namespace RPModServer
         }
         #endregion
 
-        private string _databaseLocation = Path.Combine(Directory.GetCurrentDirectory(), @"FiveMRP-Database.db");
+        private readonly string _databaseLocation = Path.Combine(Directory.GetCurrentDirectory(), @"FiveMRP-Database.db");
 
         private DatabaseEngine()
         {

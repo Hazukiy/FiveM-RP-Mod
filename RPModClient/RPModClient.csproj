@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +53,10 @@
     <Compile Include="Job\JobPermissionSet.cs" />
     <Compile Include="Job\Jobs.cs" />
     <Compile Include="Job\JobsModel.cs" />
-    <Compile Include="Models\Constants.cs" />
     <Compile Include="Helper\ClientHelper.cs" />
     <Compile Include="Models\MessageType.cs" />
-    <Compile Include="Models\PlayerConstants.cs" />
+    <Compile Include="Models\Constants\LocalPlayerConstants.cs" />
+    <Compile Include="Models\Constants\SpawnConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlayerInit.cs" />
   </ItemGroup>

@@ -38,7 +38,7 @@ namespace RPModClient
             TriggerEvent("chat:addMessage", new
             {
                 color = color,
-                args = new[] { Constants.ChatPrefix, message }
+                args = new[] { $"[RPMod]", message }
             });
         }
 

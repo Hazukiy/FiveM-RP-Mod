@@ -9,9 +9,6 @@ namespace RPModClient
 {
     public class PlayerInit : BaseScript
     {
-        // Centre of town
-        private static Vector3 SpawnLocation = new Vector3() { X = 195.9843f, Y = -933.7408f, Z = 30.68679f };
-
         public PlayerInit()
         {
             EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
@@ -27,17 +24,16 @@ namespace RPModClient
 
         private async Task SalaryTick()
         {
-            PlayerConstants.NextSalary--;
+            LocalPlayerConstants.NextSalary--;
 
-            if(PlayerConstants.NextSalary <= 0)
+            if(LocalPlayerConstants.NextSalary <= 0)
             {
-                PlayerConstants.NextSalary = 60;
+                LocalPlayerConstants.NextSalary = 60;
+                LocalPlayerConstants.PlayerProfile.Bank += LocalPlayerConstants.CurrentJob.BaseSalary;
 
-                PlayerConstants.PlayerProfile.Bank += PlayerConstants.CurrentJob.BaseSalary;
+                TriggerServerEvent("rpSaveBank", LocalPlayerConstants.PlayerProfile.Bank);
 
-                TriggerServerEvent("rpSaveBank", PlayerConstants.PlayerProfile.Bank);
-
-                ClientHelper.Instance.PrintToClient($"Salary income of ${PlayerConstants.CurrentJob.BaseSalary}");
+                ClientHelper.Instance.PrintToClient($"Salary income of ${LocalPlayerConstants.CurrentJob.BaseSalary}");
             }
 
             await Delay(1000);
@@ -45,8 +41,8 @@ namespace RPModClient
 
         private void OnDataUpdated(ExpandoObject playerData)
         {
-            PlayerConstants.PlayerProfile = Helper.Instance.ConvertToModel(playerData);
-            Debug.WriteLine($"Loaded player profile: {PlayerConstants.PlayerProfile}");
+            LocalPlayerConstants.PlayerProfile = Helper.Instance.ConvertToModel(playerData);
+            Debug.WriteLine($"Loaded player profile: {LocalPlayerConstants.PlayerProfile}");
         }
 
         private void OnPlayerSpawned(object spawnInfo)
@@ -54,12 +50,12 @@ namespace RPModClient
             // NOTE: Although we can use spawnmanager resource, going to use it here directly
             if(Game.PlayerPed.IsAlive)
             {
-                Game.PlayerPed.Position = SpawnLocation;
+                Game.PlayerPed.Position = SpawnConstants.CentreTown;
             }
 
             // Change the player model
             Random rnd = new Random();
-            Game.Player.ChangeModel(new Model(PlayerConstants.CurrentJob.Models[rnd.Next(0, PlayerConstants.CurrentJob.Models.Count)])); 
+            Game.Player.ChangeModel(new Model(LocalPlayerConstants.CurrentJob.Models[rnd.Next(0, LocalPlayerConstants.CurrentJob.Models.Count)])); 
         }
 
         private void OnClientResourceStart(string resourceName)

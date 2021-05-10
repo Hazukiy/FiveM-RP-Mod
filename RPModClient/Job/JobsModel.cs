@@ -18,5 +18,9 @@ namespace RPModClient.Job
         public List<PedHash> Models { get; set; } // The supported models that role can support
 
         public List<JobPermissionSet> Permissions { get; set; } // A list of permissions that the job supports
+
+        public List<Vehicle> AuthorisedVehicles { get; set; } // A list of special vehicles that the role is authorised to use
+
+        public Vector3 SpawnLocation { get; set; }
     }
 }
